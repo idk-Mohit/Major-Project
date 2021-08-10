@@ -1,2 +1,2 @@
-Live Demo for the Project <i class='fas fa-hand'></i>
+Click Here - https://tvastra-healthcare.herokuapp.com/ for live Demo
  
