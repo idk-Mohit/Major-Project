@@ -1,8 +1,8 @@
 .faq-sec-1 {
     height: 20rem;
-    background-image: url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/contactUs.png");
+    background-image: url(https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
-    background-position: top; 
+    background-position: center; 
     display: flex;
     align-items: center;
     color: white;
