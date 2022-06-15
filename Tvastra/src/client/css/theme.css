@@ -137,14 +137,10 @@ label  {
 
 header {
     background-color: white;
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 
 @media only screen and (max-width:1024px)  {
-    header {
-        background-color: white;
-        padding: 10px 0px;
-    }
     h1,h2,h3 {
         font-family: "Nexa-Bold";
         line-height: 110%;

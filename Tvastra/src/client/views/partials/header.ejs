@@ -1,70 +1,85 @@
-<header><!-- Header Nav starts here -->
-    <nav class="container1">
-        <div class="nav-img">
-            <a href="Home"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="Logo_Tvastra"></a>
+<header>
+  <!-- Header Nav starts here -->
+  <nav class="container1">
+    <div class="nav-img">
+      <a href="Home"
+        ><img src="../../images/Tvastra_Light.png" alt="Logo_Tvastra"
+      /></a>
+    </div>
+    <div class="nav-links">
+      <!--Content for pc and laptop-->
+      <a href="Doctors">Doctors</a>
+      <a href="Hospitals">Hospitals</a>
+      <div class="treatment-dropdown">
+        <a href="Dentistry"
+          >Treatments <i class="treatment-icon fas fa-chevron-down"></i
+        ></a>
+        <div class="treatment-dropdown-content">
+          <ul>
+            <li><a href="Liver">Liver</a></li>
+            <li><a href="Dentistry">Dentistry</a></li>
+            <li><a href="Cardiology">Cardiology</a></li>
+            <li><a href="Heart">Heart</a></li>
+            <li><a href="Cancer">Cancer</a></li>
+            <li><a href="Orthopedic">Orthopedic</a></li>
+          </ul>
         </div>
-        <div class="nav-links"><!--Content for pc and laptop-->
-            <a href="Doctors">Doctors</a>
-            <a href="Hospitals">Hospitals</a>
-            <div class="treatment-dropdown">
-                <a href="Dentistry">Treatments <i class="treatment-icon fas fa-chevron-down"></i></a>
-                <div class="treatment-dropdown-content">
-                    <ul>
-                        <li><a href="Liver">Liver</a></li>
-                        <li><a href="Dentistry">Dentistry</a></li>
-                        <li><a href="Cardiology">Cardiology</a></li>
-                        <li><a href="Heart">Heart</a></li>
-                        <li><a href="Cancer">Cancer</a></li>
-                        <li><a href="Orthopedic">Orthopedic</a></li>
-                    </ul>
-                </div>
+      </div>
+      <a href="Tvastra_Plus">Plus<i class="tvastra-plus fas fa-plus"></i></a>
+      <a href="About_Us">About</a>
+    </div>
+    <div class="nav-button">
+      <% if(user == 'hello') { %>
+      <a href="SignIn"
+        ><button class="nav-login-button">Login / Sign Up</button></a
+      >
+      <% } %> <% if(user.name) { %>
+      <!-- User dropdown -->
+      <div class="user-dropdown">
+        <button class="user-dropbtn user-button">
+          <%= user.name %><i
+            id="user-dropdown-icon"
+            class="fas fa-chevron-down fa-sm"
+          ></i>
+        </button>
+        <div id="user-dropdown" class="user-dropdown-content">
+          <div class="dropdown-user-div">
+            <i class="far fa-user"></i>
+            <div>
+              <h6 class="user-name"><%= user.name %></h6>
+              <h6 class="user-number"><%= user.mobile %></h6>
             </div>
-            <a href="Tvastra_Plus">Plus<i class="tvastra-plus fas fa-plus"></i></a>
-            <a href="About_Us">About</a>
+          </div>
+          <a href="Profile">Profile</a>
+          <a href="User_Appointments">Appointments</a>
+          <a href="Settings">Settings</a>
         </div>
-        <div class="nav-button">
-            <% if(user == 'hello') { %>
-                <a href="SignIn"><button class="nav-login-button">Login / Sign Up</button></a>
-            <% } %>
-            <% if(user.name) { %>
-                <!-- User dropdown -->
-                <div class="user-dropdown">
-                    <button  class="user-dropbtn user-button"><%= user.name %><i id="user-dropdown-icon" class="fas fa-chevron-down fa-sm"></i></button>
-                        <div id="user-dropdown" class="user-dropdown-content">
-                            <div class="dropdown-user-div">
-                                <i class="far fa-user"></i>
-                                <div>
-                                    <h6 class="user-name"><%= user.name %></h6> 
-                                    <h6 class="user-number"><%= user.mobile %></h6>
-                                </div>
-                            </div>
-                            <a href="Profile">Profile</a>
-                            <a href="User_Appointments">Appointments</a>
-                            <a href="Settings">Settings</a>
-                        </div>                    
-                </div>
-             <a href="logout"><button class="logout-button">LogOut</button></a>
-            <% } %>  
-        </div>  <!--Content for pc and laptop-->
-        <div class="dropdown"><!-- Content for tablet and Mobile View Only -->
-           <i onclick="myFunction()" class="dropbtn fas fa-bars fa-lg"></i>
-           <div id="myDropdown" class="dropdown-content">
-            <a href="Doctors">Doctors</a>
-            <a href="Hospitals">Hospitals</a>
-            <a href="Dentistry">Treatments</a>
-            <a href="Tvastra_Plus">Tvastra Plus</a>
-            <a href="About_Us">About</a>
-            <% if(user == 'hello') { %>
-                <a href="SignIn">Login / Sign Up</a>
-            <% } %>
-            <% if(user.name) { %>
-                <hr>
-                <a href="Profile">Profile</a>
-                <a href="User_Appointments">Appointments</a>
-                <a href="Settings">Settings</a>
-                <a href="logout">LogOut</a>
-            <% } %> 
-           </div>
-        </div> <!-- Content for tablet view Only till here -->
-    </nav>
-</header> <!-- Header Nav ends Here -->  
+      </div>
+      <a href="logout"><button class="logout-button">LogOut</button></a>
+      <% } %>
+    </div>
+    <!--Content for pc and laptop-->
+    <div class="dropdown">
+      <!-- Content for tablet and Mobile View Only -->
+      <i onclick="myFunction()" class="dropbtn fas fa-bars fa-lg"></i>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="Doctors">Doctors</a>
+        <a href="Hospitals">Hospitals</a>
+        <a href="Dentistry">Treatments</a>
+        <a href="Tvastra_Plus">Tvastra Plus</a>
+        <a href="About_Us">About</a>
+        <% if(user == 'hello') { %>
+        <a href="SignIn">Login / Sign Up</a>
+        <% } %> <% if(user.name) { %>
+        <hr />
+        <a href="Profile">Profile</a>
+        <a href="User_Appointments">Appointments</a>
+        <a href="Settings">Settings</a>
+        <a href="logout">LogOut</a>
+        <% } %>
+      </div>
+    </div>
+    <!-- Content for tablet view Only till here -->
+  </nav>
+</header>
+<!-- Header Nav ends Here -->

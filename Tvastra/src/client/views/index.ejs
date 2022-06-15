@@ -1,400 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- owl carosule -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
     <!-- Flash Messages -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/journal/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
     <!-- local -->
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/messages.css">
-    <link rel="icon" type="image/x-icon" href="../images/weblogo.png">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/messages.css" />
+    <link rel="icon" type="image/x-icon" href="../images/weblogo.png" />
     <title>Tvastra | Home</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <!-- header -->
 
-<!-- header -->
-<%- include("./partials/header")  %>
-<!-- header -->
-    
-<!-- Flash Messages -->
-<%- include("./partials/messages")  %>
+    <!-- Flash Messages -->
+    <%- include("./partials/messages") %>
 
-
-<section id="sec1" class="section-1"> <!--Section 1 starts here-->
-        <div class="container1 sec-1" style="width: 90% !important;">
-            <h1>Find Affordable Healthcare</h1>
-            <p>Join the thousands of others who have exercised their right to quality healthcare at a price you can afford.</p>
-            <div class="sec-1-search">
-                <div class="sec-1-search-inner-div"><i class='fas fa-map-marker-alt map-marker'></i><i class='fas fa-crosshairs'></i>
-                <input class="location" type="text" name="location" placeholder="Delhi">
-            </div>
-                <div class="search-bar-with-suggestion">
-                  <input id="user_search_input" class="search-bar" type="text" name="search-bar" placeholder="Search for doctors, hospitals and treatments.">
-                  <ul id="suggestion_ul" class="search-bar-suggestion-list">
-                    <!-- suggestion will show here -->
-                  </ul>
-                </div>
-                <button id="user_search_button" type="button">Search</button>
-            </div>
+    <section id="sec1" class="section-1">
+      <!--Section 1 starts here-->
+      <div class="container1 sec-1" style="width: 90% !important">
+        <h1>Find Affordable Healthcare</h1>
+        <p>
+          Join the thousands of others who have exercised their right to quality
+          healthcare at a price you can afford.
+        </p>
+        <div class="sec-1-search">
+          <div class="sec-1-search-inner-div">
+            <i class="fas fa-map-marker-alt map-marker"></i
+            ><i class="fas fa-crosshairs"></i>
+            <input
+              class="location"
+              type="text"
+              name="location"
+              placeholder="Delhi"
+            />
+          </div>
+          <div class="search-bar-with-suggestion">
+            <input
+              id="user_search_input"
+              class="search-bar"
+              type="text"
+              name="search-bar"
+              placeholder="Search for doctors, hospitals and treatments."
+            />
+            <ul id="suggestion_ul" class="search-bar-suggestion-list">
+              <!-- suggestion will show here -->
+            </ul>
+          </div>
+          <button id="user_search_button" type="button">Search</button>
         </div>
-</section><!-- Section 1 Ends -->
+      </div>
+    </section>
+    <!-- Section 1 Ends -->
 
-<section id="sec2" class="section-2 container1" style="width: 90%;"> <!-- Section 2 start-->
-    <div class="text">
-            <h1>How it works</h1>
-            <p>Various facilities are provided here. But there is a protocol which needs to be followed so that you get the servicesat its best.</p>
-     </div>
-     <div class="buttons">
-            <h2 id="one" onclick="active1()" class="one"><span>01</span>Fix Consultation</h2>
-           <!-- This only works in mobile view -->
-            <div id="mob-image-sec1">
-              <div class="tab-mob-image">
-                  <img id="sideimage_HIW_mob" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.png" alt="">
-                  <h3 id="sideimage_h3_mob">Fix Consultation</h3>
-                  <p id="sideimage_p_mob">This depicts that user will have to fix appointment
-                      first when it selects a particular doctor</p>
-              </div>
-            </div>    
-            <h2 id="two"    onclick="active2()"><span>02</span>Upload Medical Reports</h2>
-            <div id="mob-image-sec2">
-            </div>
-            <h2 id="three"  onclick="active3()"><span>03</span>Consult with doctor</h2>
-            <div id="mob-image-sec3">
-            </div>
-            <h2 id="four"   onclick="active4()"><span>04</span>Fix surgery</h2>
-            <div id="mob-image-sec4">
-            </div>
-            <h2 id="five"   onclick="active5()"><span>05</span>Hospital sent estimates</h2>
-            <div id="mob-image-sec5">
-            </div>
-            <h2 id="six"    onclick="active6()"><span>06</span>Payment</h2>
-            <div id="mob-image-sec6">
-            </div>
-            <h2 id="seven"  onclick="active7()"><span>07</span>Surgery Completed</h2>
-            <div id="mob-image-sec7">
-            </div>
-    </div>
-        <!-- This Only works in Desktop and tablet view -->
-    <div class="image">
-            <img id="sideimage_HIW_desk-tab" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.png" alt="">
-            <h2 id="sideimage_h2_desk-tab">Fix Consultation</h2>
-            <p id="sideimage_p_desk-tab">This depicts that user will have to fix appointment first when it selects a particular doctor</p>
-    </div>
-</section><!--Section 2 end-->
+    <section id="sec2" class="section-2 container1" style="width: 90%">
+      <!-- Section 2 start-->
+      <div class="text">
+        <h1>How it works</h1>
+        <p>
+          Various facilities are provided here. But there is a protocol which
+          needs to be followed so that you get the servicesat its best.
+        </p>
+      </div>
+      <div class="buttons">
+        <h2 id="one" onclick="active1()" class="one">
+          <span>01</span>Fix Consultation
+        </h2>
+        <!-- This only works in mobile view -->
+        <div id="mob-image-sec1">
+          <div class="tab-mob-image">
+            <img
+              id="sideimage_HIW_mob"
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.png"
+              alt=""
+            />
+            <h3 id="sideimage_h3_mob">Fix Consultation</h3>
+            <p id="sideimage_p_mob">
+              This depicts that user will have to fix appointment first when it
+              selects a particular doctor
+            </p>
+          </div>
+        </div>
+        <h2 id="two" onclick="active2()">
+          <span>02</span>Upload Medical Reports
+        </h2>
+        <div id="mob-image-sec2"></div>
+        <h2 id="three" onclick="active3()">
+          <span>03</span>Consult with doctor
+        </h2>
+        <div id="mob-image-sec3"></div>
+        <h2 id="four" onclick="active4()"><span>04</span>Fix surgery</h2>
+        <div id="mob-image-sec4"></div>
+        <h2 id="five" onclick="active5()">
+          <span>05</span>Hospital sent estimates
+        </h2>
+        <div id="mob-image-sec5"></div>
+        <h2 id="six" onclick="active6()"><span>06</span>Payment</h2>
+        <div id="mob-image-sec6"></div>
+        <h2 id="seven" onclick="active7()"><span>07</span>Surgery Completed</h2>
+        <div id="mob-image-sec7"></div>
+      </div>
+      <!-- This Only works in Desktop and tablet view -->
+      <div class="image">
+        <img
+          id="sideimage_HIW_desk-tab"
+          src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.png"
+          alt=""
+        />
+        <h2 id="sideimage_h2_desk-tab">Fix Consultation</h2>
+        <p id="sideimage_p_desk-tab">
+          This depicts that user will have to fix appointment first when it
+          selects a particular doctor
+        </p>
+      </div>
+    </section>
+    <!--Section 2 end-->
 
-<section class="section-3"><!-- Section 3 -->
-  <div class="container1" style="width: 90%;">
-    <h1>World class expert doctors!</h1>
-    <p>The university of Texas Southeastern Medical center has been a long world-renowned hospital. But untill the 80`s, you couldn't go there. Now, with the addition of Aston Center and Zale Lipshy Hospital, UT Southeastern is also a mecca for patients.</p>
-    <div class="list-of-doctors">
-      
-    <div class="owl-carousel owl-theme">
-    <!-- Doctor 1 -->
-    <div class="item">
-        <a href="Duke_Sanson">
-            <div class="DocCard">
-                <div class="D1-img DocCard-img"></div>
-                <div class="DocCard-text">
-                    <hr class="name-bar">
-                 <h3 class="DocCard-docname">Duke Sanson</h3>
-                 <p>Oncologist <br>
-                    MBBS,MD,FRCP,MRCP,FellowShip<br>
-                    DLF Cyber City
-                 </p>
-                 <hr class="DocCard-footer">
-                </div>  
-            </div>
-        </a>
-    </div>
-    <!-- Doctor 2 -->
-    <div class="item">
-        <a href="Rose_Moon">
-            <div class="DocCard">
-                <div class="D2-img DocCard-img"></div>
-                <div class="DocCard-text">
-                    <hr class="name-bar">
-                 <h3 class="DocCard-docname">Rose Moon</h3>
-                 <p>Oncologist<br>
-                    MBBS,MD,FRCP,MRCP,FellowShip <br>
-                    Dwarka
-                 </p>
-                 <hr class="DocCard-footer">
-                </div>
-            </div>
-        </a> 
-    </div>
-    <!-- Doctor 3 -->
-    <div class="item">
-        <a href="Coni_Star">
-            <div class="DocCard">
-                <div class="D3-img DocCard-img"></div>
-                    <div class="DocCard-text">
-                    <hr class="name-bar">
-                    <h3 class="DocCard-docname">Coni Star</h3>
-                    <p>Cardiac Surgeon <br>
-                     MBBS,MD,FRCP,MRCP,FellowShip <br>
-                     Lajpa Nagar
+    <section class="section-3">
+      <!-- Section 3 -->
+      <div class="container1" style="width: 90%">
+        <h1>World class expert doctors!</h1>
+        <p>
+          The university of Texas Southeastern Medical center has been a long
+          world-renowned hospital. But untill the 80`s, you couldn't go there.
+          Now, with the addition of Aston Center and Zale Lipshy Hospital, UT
+          Southeastern is also a mecca for patients.
+        </p>
+        <div class="list-of-doctors">
+          <div class="owl-carousel owl-theme">
+            <!-- Doctor 1 -->
+            <div class="item">
+              <a href="Duke_Sanson">
+                <div class="DocCard">
+                  <div class="D1-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Duke Sanson</h3>
+                    <p>
+                      Oncologist <br />
+                      MBBS,MD,FRCP,MRCP,FellowShip<br />
+                      DLF Cyber City
                     </p>
-                    <hr class="DocCard-footer">
-                </div>           
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
             </div>
-        </a>         
-    </div>
-    <!-- Doctor 4 -->
-    <div class="item">
-          <a href="Georgia_Peter">
-            <div class="DocCard">
-                <div class="D4-img DocCard-img"></div>
-                <div class="DocCard-text">
-                    <hr class="name-bar">
-                 <h3 class="DocCard-docname">Georgia Peter</h3>
-                 <p>Cardiac Surgeon <br>
-                    MBBS,MD,FRCP,MRCP,FellowShip <br>
-                    Palam Vihar
-                 </p>
-                 <hr class="DocCard-footer">
-                </div>         
+            <!-- Doctor 2 -->
+            <div class="item">
+              <a href="Rose_Moon">
+                <div class="DocCard">
+                  <div class="D2-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Rose Moon</h3>
+                    <p>
+                      Oncologist<br />
+                      MBBS,MD,FRCP,MRCP,FellowShip <br />
+                      Dwarka
+                    </p>
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-    </div>
-    <!-- Doctor 5 -->
-    <div class="item">
-         <a href="Jonny_Eve">
-            <div class="DocCard">
-                <div class="D5-img DocCard-img"></div>
-                <div class="DocCard-text">
-                    <hr class="name-bar">
-                 <h3 class="DocCard-docname">Jonny Eve</h3>
-                 <p>Dentist <br>
-                    MBBS,MD,FRCP,MRCP,FellowShip <br>
-                    Punjabi Baag
-                 </p>
-                 <hr class="DocCard-footer">
-                </div>         
+            <!-- Doctor 3 -->
+            <div class="item">
+              <a href="Coni_Star">
+                <div class="DocCard">
+                  <div class="D3-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Coni Star</h3>
+                    <p>
+                      Cardiac Surgeon <br />
+                      MBBS,MD,FRCP,MRCP,FellowShip <br />
+                      Lajpa Nagar
+                    </p>
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
             </div>
-         </a>
-    </div>
-    <!-- Doctor 6 -->
-    <div class="item">
-         <a href="Charlie_Moon">
-            <div class="DocCard">
-                <div class="D6-img DocCard-img"></div>
-                <div class="DocCard-text">
-                    <hr class="name-bar">
-                 <h3 class="DocCard-docname">Charlie Moon</h3>
-                 <p>Dentist <br>
-                    MBBS,MD,FRCP,MRCP,FellowShip <br>
-                    DLF Cyber City
-                 </p>
-                 <hr class="DocCard-footer">
-                </div>         
+            <!-- Doctor 4 -->
+            <div class="item">
+              <a href="Georgia_Peter">
+                <div class="DocCard">
+                  <div class="D4-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Georgia Peter</h3>
+                    <p>
+                      Cardiac Surgeon <br />
+                      MBBS,MD,FRCP,MRCP,FellowShip <br />
+                      Palam Vihar
+                    </p>
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
             </div>
-         </a>
-    </div>
-    <!-- Doctor 7 -->
-    <div class="item">
-         <a href="Erin_Neir">
-            <div class="DocCard">
-                <div class="D7-img DocCard-img"></div>
-                <div class="DocCard-text">
-                    <hr class="name-bar">
-                 <h3 class="DocCard-docname">Erin Nier</h3>
-                 <p>Fertility expert <br>
-                    MBBS,MD,FRCP,MRCP,FellowShip <br>
-                    Dwarka
-                 </p>
-                 <hr class="DocCard-footer">
-                </div>         
+            <!-- Doctor 5 -->
+            <div class="item">
+              <a href="Jonny_Eve">
+                <div class="DocCard">
+                  <div class="D5-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Jonny Eve</h3>
+                    <p>
+                      Dentist <br />
+                      MBBS,MD,FRCP,MRCP,FellowShip <br />
+                      Punjabi Baag
+                    </p>
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
             </div>
-         </a>
-    </div>
-    <!-- Doctor 8 -->
-    <div class="item">
-         <a href="Romeo">
-            <div class="DocCard">
-                <div class="D8-img DocCard-img"></div>
-                <div class="DocCard-text">
-                    <hr class="name-bar">
-                 <h3 class="DocCard-docname">Romeo</h3>
-                 <p>Fertility expert <br>
-                    MBBS,MD,FRCP,MRCP,FellowShip <br>
-                    Lajpat Nagar
-                 </p>
-                 <hr class="DocCard-footer">
-                </div>         
+            <!-- Doctor 6 -->
+            <div class="item">
+              <a href="Charlie_Moon">
+                <div class="DocCard">
+                  <div class="D6-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Charlie Moon</h3>
+                    <p>
+                      Dentist <br />
+                      MBBS,MD,FRCP,MRCP,FellowShip <br />
+                      DLF Cyber City
+                    </p>
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
             </div>
-         </a>
-    </div>
-    <!-- Doctor 9 -->
-    <div class="item">
-         <a href="Steve_Roc">
-            <div class="DocCard">
-                <div class="D9-img DocCard-img"></div>
-                <div class="DocCard-text">
-                    <hr class="name-bar">
-                 <h3 class="DocCard-docname">Steve Roc</h3>
-                 <p>Orthopedic Surgeon <br>
-                    MBBS,MD,FRCP,MRCP,FellowShip <br>
-                    Palam Vihar
-                 </p>
-                 <hr class="DocCard-footer">
-                </div>         
+            <!-- Doctor 7 -->
+            <div class="item">
+              <a href="Erin_Neir">
+                <div class="DocCard">
+                  <div class="D7-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Erin Nier</h3>
+                    <p>
+                      Fertility expert <br />
+                      MBBS,MD,FRCP,MRCP,FellowShip <br />
+                      Dwarka
+                    </p>
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
             </div>
-         </a>
-    </div>
-    <!-- Doctor 10 -->
-    <div class="item">
-         <a href="Zacli_Sent">
-            <div class="DocCard">
-                <div class="D10-img DocCard-img"></div>
-                <div class="DocCard-text">
-                    <hr class="name-bar">
-                 <h3 class="DocCard-docname">Zacli sent</h3>
-                 <p>Orthopedic Surgeon <br>
-                    MBBS,MD,FRCP,MRCP,FellowShip <br>
-                    Punjabi Baag
-                 </p>
-                 <hr class="DocCard-footer">
-                </div>         
+            <!-- Doctor 8 -->
+            <div class="item">
+              <a href="Romeo">
+                <div class="DocCard">
+                  <div class="D8-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Romeo</h3>
+                    <p>
+                      Fertility expert <br />
+                      MBBS,MD,FRCP,MRCP,FellowShip <br />
+                      Lajpat Nagar
+                    </p>
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
             </div>
-         </a>
-    </div>
-    <!-- Doctor 11 -->
-    <div class="item">
-         <a href="Bironi_White">
-            <div class="DocCard">
-                <div class="D11-img DocCard-img"></div>
-                <div class="DocCard-text">
-                    <hr class="name-bar">
-                 <h3 class="DocCard-docname">Bironi White</h3>
-                 <p>Organ Transplant <br>
-                    MBBS,MD,FRCP,MRCP,FellowShip <br>
-                    Palam Vihar
-                 </p>
-                 <hr class="DocCard-footer">
-                </div>         
+            <!-- Doctor 9 -->
+            <div class="item">
+              <a href="Steve_Roc">
+                <div class="DocCard">
+                  <div class="D9-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Steve Roc</h3>
+                    <p>
+                      Orthopedic Surgeon <br />
+                      MBBS,MD,FRCP,MRCP,FellowShip <br />
+                      Palam Vihar
+                    </p>
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
             </div>
-         </a>
-    </div>
-    <!-- Doctor 12 -->
-    <div class="item">
-         <a href="Vrijuk_Sent">
-            <div class="DocCard">
-                <div class="D12-img DocCard-img"></div>
-                <div class="DocCard-text">
-                    <hr class="name-bar">
-                 <h3 class="DocCard-docname">Vrijuk sent</h3>
-                 <p>Organ Transplant <br>
-                    MBBS,MD,FRCP,MRCP,FellowShip <br>
-                    Dwarka
-                 </p>
-                 <hr class="DocCard-footer">
-                </div>         
+            <!-- Doctor 10 -->
+            <div class="item">
+              <a href="Zacli_Sent">
+                <div class="DocCard">
+                  <div class="D10-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Zacli sent</h3>
+                    <p>
+                      Orthopedic Surgeon <br />
+                      MBBS,MD,FRCP,MRCP,FellowShip <br />
+                      Punjabi Baag
+                    </p>
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
             </div>
-         </a>
-    </div>
-    <!-- Doctor 13 -->
-    <div class="item">
-          <a href="Symphony_Lec">
-            <div class="DocCard">
-                <div class="D13-img DocCard-img"></div>
-                <div class="DocCard-text">
-                    <hr class="name-bar">
-                 <h3 class="DocCard-docname">Sympony lec</h3>
-                 <p>Organ Transplant <br>
-                    MBBS,MD,FRCP,MRCP,FellowShip <br>
-                    DLF Cyber City
-                 </p>
-                 <hr class="DocCard-footer">
-                </div>         
+            <!-- Doctor 11 -->
+            <div class="item">
+              <a href="Bironi_White">
+                <div class="DocCard">
+                  <div class="D11-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Bironi White</h3>
+                    <p>
+                      Organ Transplant <br />
+                      MBBS,MD,FRCP,MRCP,FellowShip <br />
+                      Palam Vihar
+                    </p>
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-    </div>
-</div>
-    </div>
-  </div>
-</section><!-- Section 3 ends  -->
+            <!-- Doctor 12 -->
+            <div class="item">
+              <a href="Vrijuk_Sent">
+                <div class="DocCard">
+                  <div class="D12-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Vrijuk sent</h3>
+                    <p>
+                      Organ Transplant <br />
+                      MBBS,MD,FRCP,MRCP,FellowShip <br />
+                      Dwarka
+                    </p>
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Doctor 13 -->
+            <div class="item">
+              <a href="Symphony_Lec">
+                <div class="DocCard">
+                  <div class="D13-img DocCard-img"></div>
+                  <div class="DocCard-text">
+                    <hr class="name-bar" />
+                    <h3 class="DocCard-docname">Sympony lec</h3>
+                    <p>
+                      Organ Transplant <br />
+                      MBBS,MD,FRCP,MRCP,FellowShip <br />
+                      DLF Cyber City
+                    </p>
+                    <hr class="DocCard-footer" />
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 3 ends  -->
 
-<section class="section-4 container1" style="width: 90%;"><!-- Section 4 starts -->
-    <div class="sec-4-inner-div">
+    <section class="section-4 container1" style="width: 90%">
+      <!-- Section 4 starts -->
+      <div class="sec-4-inner-div">
         <div class="How-it-works-text">
-            <h1>Featured Medical Treatments</h1>
-            <p>Join the thousands of others who have exercised thier rights to quality healthcare at a price you can afford.</p>
+          <h1>Featured Medical Treatments</h1>
+          <p>
+            Join the thousands of others who have exercised thier rights to
+            quality healthcare at a price you can afford.
+          </p>
         </div>
         <div class="sec-4-img">
           <div class="T1-img dentistry go-to-bottom">
-            <div class="treatment-img-text"><span>Dentistry</span><br>50+ Specialists</div>
+            <div class="treatment-img-text">
+              <span>Dentistry</span><br />50+ Specialists
+            </div>
           </div>
           <div class="T2-img cancer go-to-bottom">
-            <div class="treatment-img-text"><span>Cancer</span><br>50+ Specialists</div>
+            <div class="treatment-img-text">
+              <span>Cancer</span><br />50+ Specialists
+            </div>
           </div>
           <div class="T3-img cardiologic go-to-bottom">
-            <div class="treatment-img-text"><span>Cardiologic</span><br>50+ Specialists</div>
+            <div class="treatment-img-text">
+              <span>Cardiologic</span><br />50+ Specialists
+            </div>
           </div>
           <div class="T4-img multi-organ go-to-bottom">
-            <div class="treatment-img-text"><span>Multi-organ</span><br>50+ Specialists</div>
+            <div class="treatment-img-text">
+              <span>Multi-organ</span><br />50+ Specialists
+            </div>
           </div>
           <div class="T5-img orthopedics go-to-bottom">
-            <div class="treatment-img-text"><span>Orthopedics</span><br>50+ Specialists</div>
+            <div class="treatment-img-text">
+              <span>Orthopedics</span><br />50+ Specialists
+            </div>
           </div>
           <div class="T6-img infertility go-to-bottom">
-            <div class="treatment-img-text"><span>Infertility</span><br>50+ Specialists</div>
+            <div class="treatment-img-text">
+              <span>Infertility</span><br />50+ Specialists
+            </div>
           </div>
         </div>
-    </div>
-</section><!--  section-4 ends here -->
+      </div>
+    </section>
+    <!--  section-4 ends here -->
 
-<section class="section-5"><!--  section-5 Starts here -->
-    <div class="container1" style="width: 90%;">
+    <section class="section-5">
+      <!--  section-5 Starts here -->
+      <div class="container1" style="width: 90%">
         <h1>Exclusive Services</h1>
-        <p>We want you to be comfortable and thus apart from threating you illness, we provide you with other services that you can see.</p>
+        <p>
+          We want you to be comfortable and thus apart from threating you
+          illness, we provide you with other services that you can see.
+        </p>
         <div class="sec-5-icons">
-            <div><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-01.png" alt="travel png"><h3>TRAVEL</h3></div>
-            <div><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-02.png" alt="travel png"><h3>FOOD</h3></div>
-            <div><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-03.png" alt="travel png"><h3>ACCOMODATION</h3></div>
-            <div><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-07.png" alt="travel png"><h3>LABS</h3></div>
-            <div><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-12.png" alt="travel png"><h3>REPORTS</h3></div>
-            <div><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-06.png" alt="travel png"><h3>AMBULANCE</h3></div>
+          <div>
+            <img src="../images/airplane_image.png" alt="travel png" />
+            <h3>TRAVEL</h3>
+          </div>
+          <div>
+            <img src="../images/burger_image.png" alt="travel png" />
+            <h3>FOOD</h3>
+          </div>
+          <div>
+            <img
+              src="../images/accomodation_image.png"
+              alt="travel png"
+            />
+            <h3>ACCOMODATION</h3>
+          </div>
+          <div>
+            <img
+              src="../images/lab_image.png"
+              alt="travel png"
+            />
+            <h3>LABS</h3>
+          </div>
+          <div>
+            <img
+              src="../images/report_image.png"
+              alt="travel png"
+            />
+            <h3>REPORTS</h3>
+          </div>
+          <div>
+            <img
+              src="../images/ambulance_image.png"
+              alt="travel png"
+            />
+            <h3>AMBULANCE</h3>
+          </div>
         </div>
-    </div>  
-</section><!-- Homepage sec-5 ends here -->
+      </div>
+    </section>
+    <!-- Homepage sec-5 ends here -->
 
-<section class="need-help"><!-- Need help container1-->
-    <div class="need-help-inner container1" style="width: 90%;"><!--Need Help container1-->
+    <section class="need-help">
+      <!-- Need help container1-->
+      <div class="need-help-inner container1" style="width: 90%">
+        <!--Need Help container1-->
         <div class="need-help-text">
-            <h2>Need Help?</h2>
-            <p>Just let us know. We will be happy to assist you!</p>
+          <h2>Need Help?</h2>
+          <p>Just let us know. We will be happy to assist you!</p>
         </div>
         <div class="need-help-button">
-           <a href="Submit_Query"><button>Submit your query</button></a>
+          <a href="Submit_Query"><button>Submit your query</button></a>
         </div>
-    </div>
-</section><!-- Need Help Section ends here -->
+      </div>
+    </section>
+    <!-- Need Help Section ends here -->
 
-<!-- footer  -->
-<%- include("./partials/footer")  %>
-<!-- footer -->
-</body>
-<!-- owl carousel -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
-   <!-- Flash Cards  -->
-<script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-      crossorigin="anonymous">
-</script>
-<script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
-<script src="../Dom/index.js"></script>
-<script src="../Dom/script.js"></script>
-<script src="../Dom/index-cl.js"></script>
-<script src="../Dom/search.js"></script>
+    <!-- footer  -->
+    <%- include("./partials/footer") %>
+    <!-- footer -->
+  </body>
+  <!-- owl carousel -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"
+  ></script>
+  <!-- Flash Cards  -->
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/43ab3e4e97.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../Dom/index.js"></script>
+  <script src="../Dom/script.js"></script>
+  <script src="../Dom/index-cl.js"></script>
 </html>
